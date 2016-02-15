@@ -1,0 +1,8 @@
+SELECT count(*) FROM DOG
+WHERE Kind = 'Poodle'
+
+SELECT ID, FirstName, LastName FROM PERSON 	 
+WHERE LastName = 'Cappelini' OR LastName = 'Rossi'
+
+SELECT ID,Brand,Name,Year FROM CAR	 
+WHERE Year > 2014 AND (Brand = 'Porsche' OR Brand = 'Ford')
