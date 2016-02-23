@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Feb 15, 2016 at 12:25 AM
+-- Generation Time: Feb 22, 2016 at 06:34 AM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `WS-2016`
+-- Database: `denis`
 --
 
 -- --------------------------------------------------------
@@ -89,7 +89,6 @@ INSERT INTO `DOG` (`ID`, `Name`, `Kind`, `Sex`) VALUES
 --
 
 CREATE TABLE `PERSON` (
-  `ID` int(11) NOT NULL,
   `FirstName` varchar(20) NOT NULL,
   `LastName` varchar(20) NOT NULL,
   `Email` varchar(40) NOT NULL
@@ -99,22 +98,24 @@ CREATE TABLE `PERSON` (
 -- Dumping data for table `PERSON`
 --
 
-INSERT INTO `PERSON` (`ID`, `FirstName`, `LastName`, `Email`) VALUES
-(1, 'Denis', 'Cappelini', 'denis_cappelini@hotmail.com'),
-(2, 'Matheus', 'Fernandes', 'matheus.fernandes@gmail.com'),
-(3, 'Debora', 'Cappelini', 'deboracapp@hotmail.com'),
-(4, 'Daniel', 'Rossi', 'daniel_rossi@gmail.com'),
-(5, 'Victor', 'Grilli', 'victorgrilli@gmail.com'),
-(6, 'Murilo', 'Pratavieira', 'muriloprata@gmail.com'),
-(7, 'Iuri', 'Gaspar', 'iuraogasp@gmail.com'),
-(8, 'Joao', 'Baldan', 'joaobaldan@gmail.com'),
-(9, 'Paulo', 'Filizzola', 'paulofiliz@gmail.com'),
-(10, 'Marcos', 'Cardillo', 'marcoscard@gmail.com'),
-(11, 'Vera', 'Rossi', 'verarossi@hotmail.com'),
-(12, 'Jennifer', 'Lu', 'jnniferlu@gmail.com'),
-(13, 'Alice', 'Cheng', 'alicecheng@gmail.com'),
-(14, 'Mario', 'Cappelini', 'mariocapp@gmail.com'),
-(15, 'Marcus', 'Mourao', 'marcusmourao@gmail.com');
+INSERT INTO `PERSON` (`FirstName`, `LastName`, `Email`) VALUES
+('Alice', 'Cheng', 'alicecheng@gmail.com'),
+('Daniel', 'Rossi', 'daniel_rossi@gmail.com'),
+('Debora', 'Cappelini', 'deboracapp@hotmail.com'),
+('Denis', 'Cappelini', 'denis_cappelini@hotmail.com'),
+('Iuri', 'Gaspar', 'iuraogasp@gmail.com'),
+('Jennifer', 'Lu', 'jnniferlu@gmail.com'),
+('Joao', 'Baldan', 'joaobaldan@gmail.com'),
+('Joao', 'Souza', 'joazinho@hotmail.com'),
+('Marcos', 'Cardillo', 'marcoscard@gmail.com'),
+('Marcus', 'Mourao', 'marcusmourao@gmail.com'),
+('Mario', 'Cappelini', 'mariocapp@gmail.com'),
+('Matheus', 'Fernandes', 'matheus.fernandes@gmail.com'),
+('Murilo', 'Pratavieira', 'muriloprata@gmail.com'),
+('Paulo', 'Filizzola', 'paulofiliz@gmail.com'),
+('Vera', 'Rossi', 'verarossi@hotmail.com'),
+('Victor', 'Grilli', 'victorgrilli@gmail.com'),
+('Ze', 'Pererira', 'ze@ze.com');
 
 --
 -- Indexes for dumped tables
@@ -138,6 +139,4 @@ ALTER TABLE `DOG`
 -- Indexes for table `PERSON`
 --
 ALTER TABLE `PERSON`
-  ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `ID` (`ID`),
   ADD UNIQUE KEY `Email` (`Email`);
