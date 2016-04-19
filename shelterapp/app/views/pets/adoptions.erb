@@ -1,0 +1,16 @@
+<% @pets.each do |pet| %>
+
+    <div class="row">
+      <div class="card white z-depth-1 col l6 offset-l1">
+        <div class="card-content">
+          <p> <%= pet.name %> </p>
+          <p> <%= pet.kind %> </p>
+          <p> <%= pet.breed %> </p>
+          <p> <%= pet.age %> </p>
+          <p> <%= pet.gender %> </p>
+          <p> <%= pet.description %> </p>
+        </div>
+      </div>
+    </div>
+
+<% end %>

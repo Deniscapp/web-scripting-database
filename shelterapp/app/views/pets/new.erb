@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New pet</title>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="row">
+    <div class="card white z-depth-1 col l4 offset-l4">
+      <div>
+        <div class="card-title center">
+          <h4>New pet</h4>
+        </div>
+      </div>
+      <div class="card-content">
+        <%= form_for @pet do |p| %>
+          <div class="row">
+            <div class="input-field col s6">
+              <%= p.label :name %>
+              <%= p.text_field :name %>
+            </div>
+            <div class="input-field col s6">
+              <%= p.label :kind, 'Kind of animal' %>
+              <%= p.text_field :kind%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col l6 s12">
+              <%= p.label :breed%>
+              <%= p.text_field :breed%>
+            </div>
+
+            <div class="input-field col l6 s12">
+              <%= p.label :age%>
+              <%= p.number_field :age, :step => 1%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= p.label :gender%>
+              <%= p.text_field :gender%>
+            </div>
+
+          </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= p.label :description%>
+                <%= p.text_area :description, :class => 'materialize-textarea'%>
+              </div>
+            </div>
+            <div class="row">
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>File</span>
+                  <%= p.file_field :picture%>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col l3 offset-l4">
+                <button class="btn waves-effect waves-light" type="submit">Submit</button>
+              </div>
+            </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</body>
+</html>
