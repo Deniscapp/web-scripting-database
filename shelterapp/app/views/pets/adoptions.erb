@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+  $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });
+</script>
+<%= render 'layouts/navbar' %>
+
+<div class="row">
+<% @pets.each do |pet| %>
+      <div class="card white z-depth-1 col l2 offset-l1">
+        <div class="card-image center-align">
+          <%= image_tag("/uploads/pets/#{pet.id}/petpic.png") %>
+        </div>
+        <div class="card-content">
+          <p> <%= pet.name %> </p>
+          <p> <%= pet.kind %> </p>
+          <p> <%= pet.breed %> </p>
+          <p> <%= pet.age %> </p>
+          <p> <%= pet.gender %> </p>
+          <p> <%= pet.description %> </p>
+        </div>
+        <div class="card-action">
+          <div class="center">
+            <%=link_to ' <i class="material-icons">arrow_forward</i>'.html_safe, pet_path(pet), :class => 'tooltipped','data-tooltip' => 'View Pet'%>
+          </div>
+        </div>
+      </div>
+<% end %>
+</div>
